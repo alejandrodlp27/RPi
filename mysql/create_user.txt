@@ -1,0 +1,3 @@
+CREATE USER 'alejandro'@'localhost' IDENTIFIED BY 'eUler271';
+GRANT ALL PRIVILEGES ON *.* to 'alejandro'@'localhost'
+	WITH GRANT OPTION;

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Script to automate mysql installation
+
+### NOTE: You must have the package "mysql-apt-config_0.7.2-1_all.deb"
+
+packpath=/home/pi/mysql/mysql-apt-config_0.7.2-1_all.deb
+
+
+
+sudo dpkg -i $packpath
+
+# Update package information
+
+sudo apt-get update
+
+# install MYSQL:
+
+sudo apt-get install mysql-server
+
+# Creates local user with the <create_user.txt> script. Password given
+# during installation of MySQL (previous step) is required for this step.
+
+mysql -u root -p < create_user.txt
